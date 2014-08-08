@@ -1,9 +1,9 @@
 {
   "name": "orbital",
-  "description": "REPLACEME - What does this package (or the original one you're wrapping) do?",
+  "description": "A HTML5 game engine, making use of both meteor, and PIXI.",
   "homepage": "",
-  "author": "Your Name <your@email> (http://yoursite)",
+  "author": "Will Stott (https://github.com/willstott101), Michael Zimmerman (https://github.com/sinistralis)",
   "version": "0.0.1",
-  "git": "",
+  "git": "https://github.com/willstott101/orbital.git",
   "packages": {}
 }
