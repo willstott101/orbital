@@ -3,6 +3,32 @@
 
 ###### This model considers the render and `Update` loop the same. With physics independent. We can change that if we feel we need to.
 
+####### My proposed file structure, in order of 'compilation.' I'm not sure we need to have lots of folders. Just folders when we're using libraries. My order might be messed up, but we can change that as we become more certain about what goes in which file.
+```
+package.js
+orbital/
+	lib/
+		pixi.js
+		//box2d?
+		//audio lib
+
+	time.js
+
+	assets.js
+	entity.js
+	bundle.js // Bundle {}, entities []
+	world.js // Bundles [], Entities []
+
+	render.js
+	physics/
+
+	core.js // Engine {}
+
+	satellite_client.js
+	satellite_server.js
+```
+
+
 #### client
 ```
 Engine(Client) {
