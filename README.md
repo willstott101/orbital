@@ -3,7 +3,9 @@
 
 ###### This model considers the render and `Update` loop the same. With physics independent. We can change that if we feel we need to.
 
-####### My proposed file structure, in order of 'compilation.' I'm not sure we need to have lots of folders. Just folders when we're using libraries. My order might be messed up, but we can change that as we become more certain about what goes in which file.
+
+#### repo
+###### MY proposed file structure, in order of 'compilation.' I'm not sure we need to have lots of folders. Just folders when we're using libraries. My order might be messed up, but we can change that as we become more certain about what goes in which file.
 ```
 package.js
 orbital/
