@@ -1,12 +1,15 @@
-This file will be populated with more useful readme stuff, when we're closer to release. For now we can use it to outline the structure of the enigne.
+This file will be populated with more useful readme stuff, when we're closer to release. For now we can use it to outline the structure of the engine.
+ -----------
 
-This model considers the render and logic loop the same. With physics independent. We can change that if we feel we need to.
+ h3. This model considers the render and logic loop the same. With physics independent. We can change that if we feel we need to.
 
+h3. client
+```
 Engine(Client) {
 	
 	// Optional modules
 
-	Renderer { update(), tock()}
+	Renderer { update() }
 	Physics { tick() }
 	Audio {}
 
@@ -45,8 +48,7 @@ Engine(Client) {
 	}
 
 	AssetHandler {
-		Icons
-		Images
+		// Will wrap the PIXI system for textures.
 		Sounds
 		Music
 	}
@@ -55,7 +57,10 @@ Engine(Client) {
 
 	}
 }
+```
 
+h3. server
+```
 Engine(Server) {
 	Synchronizer {
 		//Validates incoming packets and synchronizes collections.
@@ -65,3 +70,4 @@ Engine(Server) {
 		//Define entity data, permissions, etc for each entity to validate against for incoming packets. Entities can be items, monsters, players, whatever
 	}
 }
+```
