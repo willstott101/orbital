@@ -1,9 +1,9 @@
-## This file will be populated with more useful readme stuff, when we're closer to release. For now we can use it to outline the structure of the engine.
+#### This file will be populated with more useful readme stuff, when we're closer to release. For now we can use it to outline the structure of the engine.
 
 
-### This model considers the render and `Update` loop the same. With physics independent. We can change that if we feel we need to.
+###### This model considers the render and `Update` loop the same. With physics independent. We can change that if we feel we need to.
 
-### client
+#### client
 ```
 Engine(Client) {
 	
@@ -59,7 +59,7 @@ Engine(Client) {
 }
 ```
 
-### server
+#### server
 ```
 Engine(Server) {
 	Synchronizer {
