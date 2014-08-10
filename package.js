@@ -8,9 +8,18 @@ Package.describe({
 /*We have more control, and it allows us to structure our source in a more useful way for the engine.*/
 Package.on_use(function (api, where) {
 
-	api.add_files('/client/lib/pixi.js', 'client');
+	api.add_files('/orbital/lib/pixi.js', 'client');
 
-	api.add_files('orbital.js', ['client', 'server']);
+	api.add_files('/orbital/time.js', ['client', 'server']);
+
+	api.add_files('/orbital/assets.js', 'client');
+	api.add_files('/orbital/entity.js', 'client');
+	api.add_files('/orbital/bundle.js', 'client');
+	api.add_files('/orbital/world.js', 'client');
+
+	api.add_files('/orbital/render.js', 'client');
+
+	api.add_files('/orbital/core.js', 'client');
 });
 
 Package.on_test(function (api) {
