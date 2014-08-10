@@ -20,6 +20,9 @@ Package.on_use(function (api, where) {
 	api.add_files('/orbital/render.js', 'client');
 
 	api.add_files('/orbital/core.js', 'client');
+
+	api.export('Orbital', 'client');
+	api.export('Time', ['client', 'server'])
 });
 
 Package.on_test(function (api) {
