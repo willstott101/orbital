@@ -1,20 +1,7 @@
-function World() {
-	var Bundles[],
-		Entities[];
+//This is the object which will be exported to be global inside of the entire app. Right now it is only global to the package.
+Orbital = {
 
-	World.prototype.loadBundle(bundle) {
-
-	};
-
-	World.prototype.removeBundle(bundle) {
-
-	};
-}
-
-
-
-Orbital = function() {
-	var World = new World();
-
+	//Start the world.
+	World: new World();
 
 }
