@@ -26,3 +26,19 @@ Bundle = function (name, entities) {
 	}
 
 }
+
+/* An example usage being:
+
+var enemy = new Entity ("Spider", ["spider.png"]);
+
+var enemyBundle = new Bundle ("Spider_Pack", [
+												enemy,
+												enemy,
+												enemy,
+												enemy,
+												enemy,
+												]);
+
+// Saves the bundle to JSON-like string in mongo db.
+Orbital.saveBundle(enemyBundle);
+*/

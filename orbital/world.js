@@ -5,6 +5,13 @@ World = function () {
 	this.bundles = [new Bundle ('Spacer',[])];
 
 	this.loadBundle = function (bundle) {
+		
+		/* Assuming that the input is of type Bundle,
+		if it is not we may need code here to load a Bundle
+		object from a collection, when a string is given.
+		The string would be readable, e.g. "Player", "Level1"
+		*/
+
 		// Add the bundle to the array.
 		this.bundles[this.bundles.length] = bundle;
 		// Inform the bundle that it is added.
@@ -14,10 +21,23 @@ World = function () {
 	}
 
 	this.removeBundle = function (bundle) {
+
+		/* This function is assuming that bundle is,
+		of type Bundle. Most likely we will actually
+		load a string here. This function will iterate
+		through this.bundles till we find one with
+		that name.
+		*/
+
 		// Remove the bundle form the array.
 		this.bundles[bundle.id] = undefined;
 		// Inform the bundle that it has been removed.
 		bundle.Removed();
+
+		/* This is making use of the fact that and object
+		is independent of it's variable, and we can
+		interact with it using any reference we have.
+		*/
 
 		return true;
 	}

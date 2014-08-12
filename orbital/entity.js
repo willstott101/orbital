@@ -13,6 +13,8 @@ Entity = function (name, assets) {
 
 		Asset.load (this.assets, function () {
 			this.Loaded();
+
+			// methods are added to the World's lists here.
 			this.isLoaded = true;
 		});
 		*/
@@ -51,3 +53,22 @@ Entity = function (name, assets) {
 	}
 
 }
+
+/* An example usage being:
+
+var enemy = new Entity ("Spider", ["spider.png"]);
+enemy.Loaded = function () {
+
+	// Should be instant since this is called after loading.
+	Orbital.Render.setSprite("spider.png");
+}
+enemy.Update = function () {
+
+	// Ordinary evil stuff for enemies.
+}
+
+var enemyBundle = new Bundle ("1_Spider", [enemy]);
+
+// Saves the bundle to JSON-like string in mongo db.
+Orbital.saveBundle(enemyBundle);
+*/
