@@ -1,28 +1,32 @@
 Package.describe({
-  summary: "A HTML5 game engine, making use of both meteor, and PIXI."
+  summary: "HTML5 game engine to streamline game development on both server and client, powered by PIXI, Meteor, and Meteor Streams."
 });
 
 //The order of this defines the order of file loading.
-//I think this is much better than using client/, lib/, etc.
 
 /*We have more control, and it allows us to structure our source in a more useful way for the engine.*/
 Package.on_use(function (api, where) {
 
-	api.add_files('/orbital/lib/pixi.js', 'client');
+	//client
+	api.add_files('/orbital/client/lib/pixi.js', 'client');
+	api.add_files('/orbital/client/orbital.js', 'client');
+	api.add_files('/orbital/client/renderer.js', 'client');
+	api.add_files('/orbital/client/satelite.js', 'client');
+	api.add_files('/orbital/client/world.js', 'client');
 
-	api.add_files('/orbital/time.js', ['client', 'server']);
+	//server
+	api.add_files('/orbital/server/bootstrap.js', 'server');
+	api.add_files('/orbital/server/orbital.js', 'server');
+	api.add_files('/orbital/server/bundler.js', 'server');
+	api.add_files('/orbital/server/satelite.js', 'server');
 
-	api.add_files('/orbital/assets.js', 'client');
-	api.add_files('/orbital/entity.js', 'client');
-	api.add_files('/orbital/bundle.js', 'client');
-	api.add_files('/orbital/world.js', 'client');
 
-	api.add_files('/orbital/render.js', 'client');
+	//both
 
-	api.add_files('/orbital/core.js', 'client');
+	//export
+	api.export('OrbitalClient', 'client');
+	api.export('OrbitalServer', 'server');
 
-	api.export('Orbital', 'client');
-	api.export('Time', ['client', 'server'])
 });
 
 Package.on_test(function (api) {
