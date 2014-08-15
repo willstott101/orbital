@@ -7,6 +7,9 @@ Package.describe({
 /*We have more control, and it allows us to structure our source in a more useful way for the engine.*/
 Package.on_use(function (api, where) {
 
+	//imports
+	api.use('streams', ['client', 'server']);
+
 	//client
 	api.add_files('/orbital/client/lib/pixi.js', 'client');
 	api.add_files('/orbital/client/orbital.js', 'client');
