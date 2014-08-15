@@ -1,14 +1,11 @@
+var reference = null;
+
 OrbitalServer = function() {
-
-	var reference = null;
-
-	this.Orbit = function() {
-		if (!reference)
-		{
-			reference = new Orbital();
-		}
-		return reference;
+	if (!reference)
+	{
+		reference = new Orbital();
 	}
+	return reference;
 }
 
 Orbital = function() {
