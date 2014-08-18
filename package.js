@@ -9,6 +9,8 @@ Package.on_use(function (api, where) {
 
 	//imports
 	api.use('streams', ['client', 'server']);
+	api.use('JSONfn', ['client','server']);
+	api.use('accounts-base', ['client','server']);
 
 	//client
 	api.add_files('/orbital/client/lib/pixi.js', 'client');
